@@ -1,0 +1,2 @@
+*.la
+debian/tmp/usr/share/doc/libuv/LICENSE

@@ -1,0 +1,24 @@
+---
+LICENSE:
+  comment: |-
+    LICENSE file lists all the licenses that apply to libuv1. And licensecheck does not pick the right one.
+
+    The copyright overrides a statement like '2015-present' which is reported by licensecheck as '2015'
+  override-copyright: 2015-2021, libuv project contributors.
+  override-license: Expat
+  skip: false
+README.md:
+  override-license: CC-BY-4.0
+  skip: false
+include/uv/android-ifaddrs.h:
+  override-license: BSD-1-clause
+  skip: false
+include/uv/stdint-msvc2008.h:
+  override-license: BSD-3-clause
+  skip: false
+m4/ax_pthread.m4:
+  override-license: GPL3+ with autoconf exception
+  skip: false
+m4/libuv-check-flags.m4:
+  override-license: GPL3+ with autoconf exception
+  skip: false
