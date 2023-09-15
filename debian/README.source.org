@@ -1,4 +1,6 @@
-This module uses gbp and upstream git repository
+This module uses gbp and upstream git repository.
+
+As of version 1.44.2, =pristine-tar= branch is no longer updated.
 
 To update this package, first import the changes from upstream:
 #+begin_src shell :dir .. :exports code :results verbatim
@@ -43,7 +45,7 @@ Generate a temporary changelog:
 
 Check patches (and cleanup if necessary):
 #+begin_src shell :dir .. :exports code :results verbatim :var VERSION=version
-  quilt push -a
+  quilt push -a && quilt pop -a
 #+end_src
 
 #+RESULTS:
@@ -59,9 +61,9 @@ old version):
 : [debian/sid 3569d8b0] new upstream version
 :  1 file changed, 8 insertions(+)
 
-Test the first build and create a new pristine-tar:
+Test the first build:
 #+begin_src shell :eval no
-  gbp buildpackage --git-ignore-new --git-pristine-tar --git-pristine-tar-commit --git-no-purge
+  gbp buildpackage --git-ignore-new --git-no-purge
 #+end_src
 
 Regenerate the symbol file:
@@ -106,8 +108,7 @@ And commit the results:
 :  1 file changed, 105 insertions(+), 102 deletions(-)
 
 
-Once the new pristine-tar is created, you can rebuild (if needed) with
-the following command:
+You can rebuild (if needed) with the following command:
 
 #+begin_src shell :dir ".." :results verbatim :exports code
   gbp buildpackage --git-ignore-new
