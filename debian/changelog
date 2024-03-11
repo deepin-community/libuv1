@@ -1,3 +1,46 @@
+libuv1 (1.48.0-1) unstable; urgency=medium
+
+  [ Dominique Dumont ]
+  * new upstream version:
+    * Fix CVE-2024-24806 (Closes: #1063484)
+  * copyright: update with cme
+  * refreshed patches
+  * rm patch lp2046442-linux-don-t-use-io_uring-...
+  * refreshed symbols file
+
+ -- Dominique Dumont <dod@debian.org>  Wed, 14 Feb 2024 18:47:19 +0100
+
+libuv1 (1.46.0-3) unstable; urgency=medium
+
+  * add patch to fix build on kernel < 5.10.186.
+    Thanks to Simon Choppin and Ubuntu fot the patch (Closes: 1058743)
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 30 Dec 2023 18:32:28 +0100
+
+libuv1 (1.46.0-2) unstable; urgency=medium
+
+  * re-release to unstable
+
+ -- Dominique Dumont <dod@debian.org>  Sun, 15 Oct 2023 16:37:48 +0200
+
+libuv1 (1.46.0-1) experimental; urgency=medium
+
+  * new upstream release:
+  * control: declare compliance with policy 4.6.2
+  * control: drop kfreebsd (dropped upstream)
+  * fill-copyright-blanks:
+    * specify license of a test file
+    * drop removed files
+    * specify CC-BY-4.0 license for doc files
+  * refreshed copyright with cme
+  * install LICENSE-extra file in libuv1-dev.docs
+  * refreshed patches
+  * update symbols file
+  * ship libuv.a instead of libuv_a.a
+  * update README.source.org
+
+ -- Dominique Dumont <dod@debian.org>  Tue, 05 Sep 2023 18:34:19 +0200
+
 libuv1 (1.44.2-1) unstable; urgency=medium
 
   * new upstream version
